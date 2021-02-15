@@ -14,7 +14,7 @@ export default function Home() {
                     :
                     <div>
                         <h1>Hello this is e-commerce demo,</h1>
-                        {/* <h1>login for more functionality and to save your cart!</h1> */}
+                        <h1>login for more functionality and to save your cart!</h1>
                     </div>
                 }
             </div>
