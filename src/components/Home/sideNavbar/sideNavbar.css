@@ -1,0 +1,26 @@
+#navs-container {
+    margin: 5rem 0 0;
+    padding: 0 !important;
+}
+
+.nav-container {
+    border-top: lightgray 1px solid;
+    cursor: pointer;
+}
+
+
+.nav-container a {
+    color: rgb(68, 68, 68);
+    font-weight: 600;
+    font-size: 1.7rem;
+    height: 100%;
+    padding: 1.5rem 1rem;
+}
+
+.nav-container:hover a {
+    color: gray;
+}
+
+.nav-container:last-of-type {
+    border-bottom: lightgray 1px solid;
+}

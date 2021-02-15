@@ -1,0 +1,98 @@
+.single-product-container {
+    animation-duration: .4s;
+}
+
+.single-product-image-container img {
+    width: 100%;
+}
+
+.select-color-container, .select-size-container {
+    padding: 0 !important;
+}
+
+.select-color-container label, .select-size-container label {
+    font-size: 1.9rem;
+}
+
+.select-color-container select, .select-color-container select option,
+.select-size-container select, .select-size-container select option {
+    font-size: 1.6rem;
+}
+
+.single-product-right-container button {
+    margin-top: 5rem;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+}
+
+.hbtn {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    padding: 8px 20px;
+    margin: 0px 3px 6px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    z-index: 0;
+} 
+
+
+.hbtn i {
+    padding-right: 8px;
+} 
+
+
+.hb-fill-middle2-bg::before {
+    position: absolute;
+    content: "";
+    background: rgb(0, 0, 0);
+    transition-duration: 0.3s;
+    z-index: -1;
+    inset: 0px 0px auto auto;
+    width: 0px;
+    height: 100%;
+    opacity: 1;
+} 
+
+
+.hb-fill-middle2-bg:hover::before {
+    width: 50%;
+    height: 100%;
+    opacity: 1;
+} 
+
+
+.hb-fill-middle2-bg {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease 0s;
+} 
+
+
+.hb-fill-middle2-bg:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    transition: all 0.3s ease 0s;
+} 
+
+
+.hb-fill-middle2-bg::after {
+    position: absolute;
+    content: "";
+    background: rgb(0, 0, 0);
+    transition-duration: 0.3s;
+    z-index: -1;
+    inset: 0px auto auto 0px;
+    width: 0px;
+    height: 100%;
+    opacity: 1;
+} 
+
+
+.hb-fill-middle2-bg:hover::after {
+    width: 50%;
+} 

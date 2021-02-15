@@ -1,0 +1,99 @@
+.cart-container {
+    margin-top: 5rem;
+}
+
+.cart-container, .cart-container table, .cart-container thead {
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.cart-item-remove {
+    color: rgb(88, 191, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cart-item-remove:hover {
+    filter: brightness(110%);
+}
+
+.pqt {
+    text-align: end;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-container {
+    padding: 2rem 0;
+    transition-duration: 1s;
+}
+
+.cart-item-img-container, .cart-item-img-container img {
+    width: 100%;
+    max-width: 20rem !important;
+    max-height: 20rem !important;
+}
+
+.pqt input {
+    text-align: center;
+}
+
+.cart-checkout-container {
+    padding-bottom: 10rem;
+}
+
+.cart-checkout-container h2 {
+    text-align: center;
+    padding: 5rem 0 3rem;
+}
+
+.cart-checkout-buttons {
+    margin: 0 auto 1.5rem;
+}
+
+.cart-checkout-buttons a {
+    text-decoration: none !important;
+}
+
+.cart-checkout-buttons button {
+    margin: 0 auto 1rem;
+    padding: .5rem 2rem;
+    font-size: 2rem;
+}
+
+.cart-continue-button a {
+    color: black;
+}
+
+.cart-continue-button:hover>a {
+    color: white;
+}
+
+.cart-checkout-button a {
+    color: white !important;
+}
+
+.StripeCheckout {
+    all: revert !important;
+    margin: 0 auto !important;
+    background: #343a40 !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    padding: 1rem 1rem !important;
+    width: 70% !important;
+    border-radius: .3rem !important;
+}
+
+.StripeCheckout:hover {
+    background: #212427 !important;
+}
+
+
+.StripeCheckout span {
+    all: revert !important;
+    padding: .5rem 1rem !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+    font-family: 'Hellix', 'Roboto', sans-serif !important;
+}

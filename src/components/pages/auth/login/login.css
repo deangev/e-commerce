@@ -1,0 +1,28 @@
+.login-container {
+    margin: 5rem auto 0;
+}
+
+.login-container h1 {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 3.7rem;
+    padding-bottom: 3rem;
+}
+
+.MuiFormControl-root.MuiTextField-root {
+    margin-bottom: 2rem;
+}
+
+
+.login-container label {
+    padding-bottom: .5rem;
+}
+
+.login-container input, .login-container label {
+    font-size: 1.8rem;
+}
+
+#login-button {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+}

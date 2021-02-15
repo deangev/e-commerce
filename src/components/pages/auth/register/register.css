@@ -1,0 +1,28 @@
+.register-container {
+    margin: 5rem auto 0;
+}
+
+.register-container h1 {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 3.7rem;
+    padding-bottom: 3rem;
+}
+
+.MuiFormControl-root.MuiTextField-root {
+    margin-bottom: 2rem;
+}
+
+
+.register-container label {
+    padding-bottom: .5rem;
+}
+
+.register-container input, .register-container label {
+    font-size: 1.8rem;
+}
+
+#register-button {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+}

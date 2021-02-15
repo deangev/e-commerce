@@ -1,0 +1,28 @@
+.billing-form-container {
+    margin: 5rem auto 0;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+.billing-form-container .form-group {
+    width: 100%;
+}
+
+.billing-form-container h1 {
+    width: 100%;
+}
+
+.billing-form-container input, .billing-form-container label {
+    font-size: 1.7rem;
+}
+
+.billing-name-number {
+    width: 100%;
+}
+
+.billing-form-container button {
+    font-size: 2rem;
+    margin: 2rem -.5rem !important;
+    padding: .2rem 6rem;
+    height: 4rem;
+}
