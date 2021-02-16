@@ -33,7 +33,7 @@ export default function SideNavbar() {
     return (
         <div id="navs-container" className="d-flex">
             <Tab.Container className="tab-container" activeKey={activeKey} onSelect={setActiveKey}>
-                <Nav className="navs-container col-3 d-flex flex-column">
+                <Nav className="navs-container col-3  mr-3 mr-xs-0 d-flex flex-column">
                     {navs.map(nav => {
                         return (
                             <Nav.Item className="nav-container" key={nav.id}>

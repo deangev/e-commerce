@@ -80,14 +80,14 @@ export default function Cart() {
     return (
         <div>
             <Navbar />
-            <div className="cart-container">
+            <div className="cart-container p-4 pr-5 pr-sm-0">
                 <table>
                     <thead>
                         <tr className="row mb-5">
                             <th className="col-2">Product</th>
-                            <th className="col-4"></th>
+                            <th className="col-sm-4 col-3"></th>
                             <th className="col-2 pqt">Price</th>
-                            <th className="col-2 pqt">Quantity</th>
+                            <th className="col-sm-2 col-3 pqt">Quantity</th>
                             <th className="col-2 pqt">Total</th>
                         </tr>
                     </thead>
@@ -102,7 +102,7 @@ export default function Cart() {
                                 return (
                                     <tr key={index} id={`cart-item-${index}`} className={`row cart-item-container border-bottom animate__animated animate__zoomIn animate__faster`}>
                                         <td className="col-2 cart-item-img-container"><img src={item.image} alt="" /></td>
-                                        <td className="col-4 d-flex align-items-center">
+                                        <td className="col-sm-4 col-3 d-flex align-items-center">
                                             <div className="cart-item-product-details">
                                                 <h2>{item.title}</h2>
                                                 <h4 className="mb-5"><span className="mr-2">{item.color}</span>/<span className="ml-2">{item.size}</span></h4>
@@ -119,16 +119,18 @@ export default function Cart() {
                 </table>
                 <div className="cart-checkout-container pt-1">
                     <h2 className={cart && cart.length === 0 ? 'border-top' : undefined}>Subtotal: {subtotal}</h2>
-                    <div className="col-5 cart-checkout-buttons d-flex flex-column">
-                        <Button className="cart-continue-button" variant="outline-dark"><Link to="/">Continue shopping</Link></Button>
-                        <p style={{ textAlign: 'center' }}>Demo Card Number: 4242 4242 4242 4242</p>
-                        <StripeCheckout
-                            stripeKey='pk_test_51IJe3LADckYf3b9L2WYGNm8n5yXAhJEeCrgcU0hCV3GpH3eimXa61T1d3NCLyD2VAhe6l5OWTBAOt22m4kdg0VNL00l4mpB5OT'
-                            token={handleToken}
-                            billingAddress
-                            shippingAddress
-                            amount={num * 100}
-                        />
+                    <div className="col-12 col-md-5 cart-checkout-buttons d-flex flex-column">
+                        <button href="#" className="cart-continue-button hbtn hb-fill-middle2-bg"><Link to="/">Continue shopping</Link></button>
+                        <p className="animate__animated animate__pulse animate__infinite" style={{ textAlign: 'center', color: 'red' }}>Demo Card Number: 4242 4242 4242 4242</p>
+                        <div className="col-12" style={{margin: '0 auto'}}>
+                            <StripeCheckout
+                                stripeKey='pk_test_51IJe3LADckYf3b9L2WYGNm8n5yXAhJEeCrgcU0hCV3GpH3eimXa61T1d3NCLyD2VAhe6l5OWTBAOt22m4kdg0VNL00l4mpB5OT'
+                                token={handleToken}
+                                billingAddress
+                                shippingAddress
+                                amount={num * 100}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

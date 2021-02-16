@@ -36,11 +36,11 @@ export default function Product() {
     }
 
     return (
-        currentProduct && <div className="single-product-container d-flex animate__animated animate__zoomIn">
-            <div className="single-product-image-container col-6">
+        currentProduct && <div className="single-product-container animate__animated animate__zoomIn">
+            <div className="single-product-image-container col-8 col-md-6">
                 <img src={currentProduct.image} alt="" />
             </div>
-            <div className="single-product-right-container col-6">
+            <div className="single-product-right-container col-12 col-md-6 mt-3 mt-md-0 p-5 p-xs-0">
                 <h1>{currentProduct.title}</h1>
                 <h2 className="mb-5 mt-4">{currentProduct.price}</h2>
                 <div className="single-product-select-container d-flex">
@@ -95,7 +95,7 @@ export default function Product() {
                         <button type="submit" className="col-8 hbtn hb-fill-middle2-bg">ADD TO CART
                             {cart.map(item => {
                             return (
-                                (item.id === currentProduct.id && item.size === currentSize) && `(${item.quantity})`
+                                (item.id === currentProduct.id && item.size === currentSize) && ` (${item.quantity})`
                             )
                         })}
                         </button>

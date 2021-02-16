@@ -1,8 +1,11 @@
+.order-card .card-header {
+  padding: 1rem 2rem !important;
+}
+
 .order-item img {
   width: 100%;
   height: 100%;
 }
-
 
 .order-history-container h1 {
     text-align: center;
@@ -40,4 +43,9 @@
 
 .collapsible-link[aria-expanded='true']::before {
   transform: rotate(180deg);
+}
+
+.order-total-price {
+  padding: 1rem 4rem 2rem;
+  text-align: end;
 }

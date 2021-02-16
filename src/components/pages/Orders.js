@@ -5,7 +5,7 @@ import './orders.css';
 
 export default function Orders() {
     const [{ history }, dispatch] = useStateValue()
-    console.log(history);
+    
     return (
         <div>
             <Navbar />
@@ -17,7 +17,7 @@ export default function Orders() {
                             <div id="accordionExample" className="accordion shadow mb-5">
                                 {history.map((order, index) => {
                                     return (
-                                        <div className="card" key={index}>
+                                        <div className="card order-card" key={index}>
                                             <div className="card-header bg-white shadow-sm border-0">
                                                 <h3 className="mb-0 font-weight-bold">
                                                     <a href="#" data-toggle="collapse" collapsed="true"
@@ -28,12 +28,12 @@ export default function Orders() {
                                                 </h3>
                                             </div>
                                             <div id={`collapse${index}`} aria-labelledby={`heading${index}`} data-parent="#accordionExample" className="collapse">
-                                                <div className="card-body p-5">
+                                                <div className="card-body p-2">
                                                     {order.map((item, index2) => {
                                                         return index2 > 1 &&
                                                             <div className="d-flex order-item mt-5 pb-5 border-bottom" key={index2}>
                                                                 <img className="col-2" src={item.image} alt="" />
-                                                                <div>
+                                                                <div className="col-10">
                                                                     <h3>Name: {item.title}</h3>
                                                                     <h3>Color: {item.color}</h3>
                                                                     <h3>Quantity: {item.quantity}</h3>
@@ -43,8 +43,8 @@ export default function Orders() {
                                                             </div>
                                                     })}
                                                 </div>
-                                                <div>
-                                                    <h2 className="pl-5 pb-3">Total price: {order[1]}</h2>
+                                                <div className="order-total-price">
+                                                    <h2>Total price: {order[1]}</h2>
                                                 </div>
                                             </div>
                                         </div>

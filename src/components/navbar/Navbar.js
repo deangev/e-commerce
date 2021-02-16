@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './navbar.css';
 import * as Ai from 'react-icons/ai';
 import * as Hi from 'react-icons/hi';
@@ -22,16 +22,12 @@ export default function Navbar() {
 
     return (
         <div id="navbar-container" className="border-bottom row">
-            <div className="d-flex col-6">
+            <div className="d-flex col-2">
                 <Link to='/'>
                     <h2>Ecommerce</h2>
                 </Link>
-                <div className="navbar-search-container">
-                    <div className="navbar-search-icon"><Ai.AiOutlineSearch /></div>
-                    <input type="text" placeholder="Search" />
-                </div>
             </div>
-            <div className="navbar-nav-options d-flex col-6 justify-content-end">
+            <div className="navbar-nav-options d-flex col-10 justify-content-end pr-0">
                 {user ?
                     <Dropdown>
                         <Dropdown.Toggle>
@@ -52,14 +48,14 @@ export default function Navbar() {
 
                     :
                     <div className="navbar-login-register-container d-flex align-items-center">
-                        <div className="navbar-login-container">
+                        <div className="navbar-login-container d-none d-sm-inline">
                             <Link to="/register">
-                                <h3 className='m-0'>Register</h3>
+                                <h3 className='m-0'>Sign up</h3>
                             </Link>
                         </div>
                         <div className="navbar-register-container pl-5 pr-3">
                             <Link to="/login">
-                                <h3 className='m-0'>Login</h3>
+                                <h3 className='m-0'>Sign in</h3>
                             </Link>
                         </div>
                     </div>

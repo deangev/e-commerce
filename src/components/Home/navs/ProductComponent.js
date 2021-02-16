@@ -8,7 +8,7 @@ export default function ProductComponent({ collection, setActiveKey }) {
         <>
             {collection.map((product, index) => {
                 return (
-                    <div className="product-wrapper col-4 animate__animated animate__zoomIn" id={product.id} key={index}>
+                    <div className="product-wrapper col-md-4 col-sm-6 col-12 animate__animated animate__zoomIn" id={product.id} key={index}>
                         <div className="">
                             <div className="product-container">
                                 <img src={product.image} alt="" onClick={() => {

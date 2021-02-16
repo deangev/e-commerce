@@ -73,27 +73,99 @@
     color: white !important;
 }
 
-.StripeCheckout {
-    all: revert !important;
-    margin: 0 auto !important;
-    background: #343a40 !important;
-    border: none !important;
-    outline: none !important;
-    cursor: pointer !important;
-    padding: 1rem 1rem !important;
-    width: 70% !important;
-    border-radius: .3rem !important;
+.StripeCheckout span {
+    box-shadow: none !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+    font-size: 1.8rem !important;
+    font-weight: 500 !important;
+    font-family: 'Hellix', 'Roboto', sans-serif !important;
 }
+
+.StripeCheckout:hover span {
+    color: white !important;
+}
+
+.StripeCheckout {
+    width: 100%;
+    position: relative !important;
+    box-sizing: border-box !important;
+    display: inline-block !important;
+    overflow: hidden !important;
+    padding: 6px 40px !important;
+    margin: 0px 3px 6px !important;
+    text-align: center !important;
+    border: 2px solid rgb(0, 0, 0) !important;
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+    white-space: nowrap !important;
+    z-index: 0 !important;
+    border-radius: 0 !important;
+} 
+
+
+.StripeCheckout i {
+    padding-right: 8px !important;
+} 
+
+
+.StripeCheckout::before {
+    position: absolute !important;
+    content: "" !important;
+    background: rgb(0, 0, 0) !important;
+    transition-duration: 0.3s !important;
+    z-index: -1 !important;
+    inset: 0px 0px auto auto !important;
+    width: 0px !important;
+    height: 100% !important;
+    opacity: 1 !important;
+} 
+
+
+.StripeCheckout:hover::before {
+    width: 50% !important;
+    height: 100% !important;
+    opacity: 1 !important;
+} 
+
+
+.StripeCheckout {
+    background: transparent !important;
+    color: rgb(255, 255, 255) !important;
+    transition: all 0.3s ease 0s !important;
+} 
+
 
 .StripeCheckout:hover {
-    background: #212427 !important;
-}
+    color: rgb(255, 255, 255) !important;
+    background: rgb(0, 0, 0) !important;
+    transition: all 0.3s ease 0s !important;
+} 
 
 
-.StripeCheckout span {
-    all: revert !important;
-    padding: .5rem 1rem !important;
-    color: white !important;
-    font-size: 1.8rem !important;
-    font-family: 'Hellix', 'Roboto', sans-serif !important;
+.StripeCheckout::after {
+    position: absolute !important;
+    content: "" !important;
+    background: rgb(0, 0, 0) !important;
+    transition-duration: 0.3s !important;
+    z-index: -1 !important;
+    inset: 0px auto auto 0px !important;
+    width: 0px !important;
+    height: 100% !important;
+    opacity: 1 !important;
+} 
+
+
+.StripeCheckout:hover::after {
+    width: 50% !important;
+} 
+
+@media only screen and (max-width: 600px) {
+    tbody * {
+        font-size: 1.5rem;
+    }
+
+    .cart-item-container h2 {
+        font-size: 1.5rem;
+    }
 }

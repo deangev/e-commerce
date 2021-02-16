@@ -1,5 +1,6 @@
 .single-product-container {
     animation-duration: .4s;
+    display: flex;
 }
 
 .single-product-image-container img {
@@ -96,3 +97,9 @@
 .hb-fill-middle2-bg:hover::after {
     width: 50%;
 } 
+
+@media only screen and (max-width: 770px) {
+    .single-product-container { 
+        display: block;
+    }
+}
