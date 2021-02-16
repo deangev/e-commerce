@@ -8,6 +8,7 @@ import StripeCheckout from 'react-stripe-checkout'
 import { toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
+import Loader from './Loader';
 
 toast.configure()
 
@@ -55,12 +56,14 @@ export default function Cart() {
 
     async function handleToken(token, addresses) {
         try {
+            document.getElementById('loader-wrapper').classList.remove('d-none')
             const response = await axios.post('https://e-commerce-app-de.herokuapp.com/checkout', {
                 price: num,
                 token
             })
+            document.getElementById('loader-wrapper').classList.add('d-none')
             const { status } = response.data;
-            
+
             if (status === 'success') {
                 history.push('/orders')
                 let newCart = cart
@@ -80,9 +83,10 @@ export default function Cart() {
             console.log(err)
         }
     }
-
+    
     return (
         <div>
+            <Loader />
             <Navbar />
             <div className="cart-container p-4 pr-5 pr-sm-0">
                 <table>
@@ -126,7 +130,7 @@ export default function Cart() {
                     <div className="col-12 col-md-5 cart-checkout-buttons d-flex flex-column">
                         <button href="#" className="cart-continue-button hbtn hb-fill-middle2-bg"><Link to="/">Continue shopping</Link></button>
                         <p className="animate__animated animate__pulse animate__infinite" style={{ textAlign: 'center', color: 'red' }}>Demo Card Number: 4242 4242 4242 4242</p>
-                        <div className="col-12" style={{margin: '0 auto'}}>
+                        <div className="col-12" style={{ margin: '0 auto' }}>
                             <StripeCheckout
                                 stripeKey='pk_test_51IJe3LADckYf3b9L2WYGNm8n5yXAhJEeCrgcU0hCV3GpH3eimXa61T1d3NCLyD2VAhe6l5OWTBAOt22m4kdg0VNL00l4mpB5OT'
                                 token={handleToken}
