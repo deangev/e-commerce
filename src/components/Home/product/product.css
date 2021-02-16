@@ -3,12 +3,17 @@
     display: flex;
 }
 
+.single-product-image-container {
+    margin: 0 auto;
+}
+
 .single-product-image-container img {
     width: 100%;
 }
 
 .select-color-container, .select-size-container {
     padding: 0 !important;
+    margin: 0 auto;
 }
 
 .select-color-container label, .select-size-container label {
