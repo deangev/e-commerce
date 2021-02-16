@@ -54,26 +54,30 @@ export default function Cart() {
     }, [cart.length, cart, subtotal, setSubtotal])
 
     async function handleToken(token, addresses) {
-        const response = await axios.post('https://e-commerce-app-de.herokuapp.com/checkout', {
-            price: num,
-            token
-        })
-        const { status } = response.data;
-
-        if (status === 'success') {
-            history.push('/orders')
-            let newCart = cart
-            newCart = [new Date().toLocaleDateString()].concat([subtotal]).concat(cart)
-            dispatch({
-                type: 'SUBMIT_ORDER',
-                item: newCart
+        try {
+            const response = await axios.post('https://e-commerce-app-de.herokuapp.com/checkout', {
+                price: num,
+                token
             })
-            dispatch({
-                type: 'EMPTY_CART'
-            })
-            toast("Success! The payment transfered successfully", { type: "success" });
-        } else {
-            toast("Something went wrong", { type: "error" });
+            const { status } = response.data;
+            
+            if (status === 'success') {
+                history.push('/orders')
+                let newCart = cart
+                newCart = [new Date().toLocaleDateString()].concat([subtotal]).concat(cart)
+                dispatch({
+                    type: 'SUBMIT_ORDER',
+                    item: newCart
+                })
+                dispatch({
+                    type: 'EMPTY_CART'
+                })
+                toast("Success! The payment transfered successfully", { type: "success" });
+            } else {
+                toast("Something went wrong", { type: "error" });
+            }
+        } catch (err) {
+            console.log(err)
         }
     }
 

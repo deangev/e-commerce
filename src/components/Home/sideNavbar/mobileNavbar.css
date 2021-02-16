@@ -1,0 +1,24 @@
+.tab-mobile-container {
+    width: 100% !important;
+    overflow-y: hidden;
+}
+
+.nav-mobile-container {
+    margin: 1rem;
+    background-color: white;
+    transition-duration: .4s;
+}
+
+.nav-mobile-container:hover {
+    background-color: black;
+}
+
+.nav-mobile-container:hover a {
+    color: white;
+}
+
+.nav-mobile-container a {
+    border: 2.4px solid black;
+    font-size: 1.5rem;
+    color: black;
+}
