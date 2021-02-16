@@ -27,11 +27,11 @@ export default function Navbar() {
                     <h2>Ecommerce</h2>
                 </Link>
             </div>
-            <div className="navbar-nav-options d-flex col-10 justify-content-end pr-0">
+            <div className="navbar-nav-options d-flex col-9 justify-content-end pr-0">
                 {user ?
                     <Dropdown>
-                        <Dropdown.Toggle>
-                            <div className="navbar-user-container">
+                        <Dropdown.Toggle className="pr-0">
+                            <div className="navbar-user-container pr-0">
                                 <div className="navbar-user-icon">
                                     <Hi.HiUserCircle />
                                     <h3>{user.displayName && user.displayName.charAt(0).toUpperCase() + user.displayName.slice(1)}</h3>

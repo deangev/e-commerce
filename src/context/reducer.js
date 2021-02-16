@@ -26,7 +26,6 @@ const reducer = (state, action) => {
 
         case 'SUBMIT_ORDER':
             if (state.user) {
-                console.log(action.item);
                 var userUID = auth.currentUser && auth.currentUser.uid;
                 let history = [...state.history, action.item]
                 db.collection('history').doc(userUID).set({ history: Object.assign({}, history) })

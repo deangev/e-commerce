@@ -13,11 +13,11 @@ export default function Home() {
             <div className="home-header pr-4 pl-4">
                 {user ?
                     <div>
-                        <h1>Hello {user.displayName.charAt(0).toUpperCase() + user.displayName.slice(1)}, this is e-commerce demo</h1>
+                        <h1>Hello {user.displayName.charAt(0).toUpperCase() + user.displayName.slice(1)}, this is an e-commerce demo</h1>
                     </div>
                     :
                     <div>
-                        <h1>Hello this is e-commerce demo, login for more functionality and to save your cart!</h1>
+                        <h1>Hello this is an e-commerce demo, login for more functionality and to save your cart!</h1>
                     </div>
                 }
             </div>
