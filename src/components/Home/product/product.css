@@ -13,7 +13,12 @@
 
 .select-color-container, .select-size-container {
     padding: 0 !important;
-    margin: 0 auto;
+}
+
+@media only screen and (max-width: 575px) {
+    .select-color-container, .select-size-container {
+        margin: 0 auto;
+    }
 }
 
 .select-color-container label, .select-size-container label {

@@ -1,3 +1,7 @@
+.home-container {
+    min-height: 90vh;
+}
+
 .home-header {
     text-align: center;
     background-color: #f5f5f7;

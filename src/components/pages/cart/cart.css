@@ -1,5 +1,6 @@
 .cart-container {
     margin-top: 5rem;
+    min-height: 78vh;
 }
 
 .cart-container, .cart-container table, .cart-container thead {

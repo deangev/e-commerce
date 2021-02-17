@@ -8,9 +8,9 @@ import './home.css'
 export default function Home() {
     const [{ user }] = useStateValue();
     return (
-        <div>
+        <div className="home-container">
             <Navbar />
-            <div className="home-header pr-4 pl-4">
+            <div className="home-header mb-5">
                 {user ?
                     <div>
                         <h1>Hello {user.displayName.charAt(0).toUpperCase() + user.displayName.slice(1)}, this is an e-commerce demo</h1>
