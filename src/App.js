@@ -8,7 +8,6 @@ import Orders from './components/pages/Orders';
 import { useStateValue } from './context/CartProvider';
 import ProductContext from './context/ProductContext';
 import { auth, db } from './firebase';
-import Footer from './components/footer/Footer'
 
 function App() {
   const [currentProduct, setCurrentProduct] = useState('');
@@ -63,7 +62,6 @@ function App() {
           </ProductContext.Provider>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }
